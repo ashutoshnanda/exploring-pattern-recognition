@@ -1,0 +1,94 @@
+Epoch: 0001 --> cost = 4956.209472656
+Accuracy: 0.775
+Accuracy: 0.788
+Epoch: 0101 --> cost = 4722.526367188
+Accuracy: 0.775
+Accuracy: 0.788
+Epoch: 0201 --> cost = 4469.293945312
+Accuracy: 0.775
+Accuracy: 0.788
+Epoch: 0301 --> cost = 4163.032714844
+Accuracy: 0.775
+Accuracy: 0.788
+Epoch: 0401 --> cost = 3832.638427734
+Accuracy: 0.660
+Accuracy: 0.810
+Epoch: 0501 --> cost = 3526.952148438
+Accuracy: 0.569
+Accuracy: 0.835
+Epoch: 0601 --> cost = 3256.159667969
+Accuracy: 0.490
+Accuracy: 0.852
+Epoch: 0701 --> cost = 3007.086914062
+Accuracy: 0.451
+Accuracy: 0.885
+Epoch: 0801 --> cost = 2778.080078125
+Accuracy: 0.421
+Accuracy: 0.895
+Epoch: 0901 --> cost = 2571.940917969
+Accuracy: 0.427
+Accuracy: 0.915
+Epoch: 1001 --> cost = 2387.549316406
+Accuracy: 0.407
+Accuracy: 0.927
+Epoch: 1101 --> cost = 2220.672851562
+Accuracy: 0.407
+Accuracy: 0.927
+Epoch: 1201 --> cost = 2066.948730469
+Accuracy: 0.407
+Accuracy: 0.942
+Epoch: 1301 --> cost = 1922.937988281
+Accuracy: 0.416
+Accuracy: 0.947
+Epoch: 1401 --> cost = 1786.819580078
+Accuracy: 0.432
+Accuracy: 0.962
+Epoch: 1501 --> cost = 1657.731079102
+Accuracy: 0.423
+Accuracy: 0.965
+Epoch: 1601 --> cost = 1534.756591797
+Accuracy: 0.416
+Accuracy: 0.974
+Epoch: 1701 --> cost = 1416.825195312
+Accuracy: 0.416
+Accuracy: 0.974
+Epoch: 1801 --> cost = 1302.929687500
+Accuracy: 0.411
+Accuracy: 0.977
+Epoch: 1901 --> cost = 1191.489257812
+Accuracy: 0.416
+Accuracy: 0.982
+Epoch: 2001 --> cost = 1079.813476562
+Accuracy: 0.416
+Accuracy: 0.982
+Epoch: 2101 --> cost = 965.434692383
+Accuracy: 0.410
+Accuracy: 0.989
+Epoch: 2201 --> cost = 849.161437988
+Accuracy: 0.401
+Accuracy: 0.993
+Epoch: 2301 --> cost = 735.026977539
+Accuracy: 0.401
+Accuracy: 0.993
+Epoch: 2401 --> cost = 627.575866699
+Accuracy: 0.401
+Accuracy: 0.993
+Epoch: 2501 --> cost = 530.515991211
+Accuracy: 0.401
+Accuracy: 0.993
+Epoch: 2601 --> cost = 446.154693604
+Accuracy: 0.401
+Accuracy: 0.993
+Epoch: 2701 --> cost = 375.053100586
+Accuracy: 0.402
+Accuracy: 0.997
+Epoch: 2801 --> cost = 316.249816895
+Accuracy: 0.402
+Accuracy: 0.997
+Epoch: 2901 --> cost = 268.006347656
+Accuracy: 0.402
+Accuracy: 0.997
+Optimization Finished!
+================================================================================
+Accuracy: 0.407
+Accuracy: 1.000
