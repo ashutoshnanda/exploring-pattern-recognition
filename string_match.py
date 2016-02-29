@@ -11,7 +11,7 @@ import tensorflow as tf
 length_of_pattern = 10
 length_of_strings = 20
 number_of_train_examples = 10000
-number_of_test_examples = 1000
+number_of_test_examples = 50000
 
 def get_random_bits(length):
 	return ''.join([('0' if random.random() < 0.5 else '1')\
@@ -24,7 +24,7 @@ def insert_pattern(string, pattern):
 	return ''.join(new_string)
 
 def examples_to_matrix(examples):
-	matrix = [[float(char) for j, char in enumerate(example)]\
+	matrix = [[(1 if char == '1' else 0) for j, char in enumerate(example)]\
 	            for i, example in enumerate(examples)]
 	return np.array(matrix)
 
@@ -50,18 +50,19 @@ def do_neural_network(train_data, train_labels, test_data, test_labels):
 	y = tf.placeholder("float", [None, 1])
 	weights = {
     	'h1': tf.Variable(tf.random_normal([n_input, n_hidden_1])),
-    	'h2': tf.Variable(tf.random_normal([n_hidden_1, n_hidden_2])),
+    	#'h2': tf.Variable(tf.random_normal([n_hidden_1, n_hidden_2])),
     	'out': tf.Variable(tf.random_normal([n_hidden_2, n_classes]))
 	}
 	biases = {
     	'b1': tf.Variable(tf.random_normal([n_hidden_1])),
-    	'b2': tf.Variable(tf.random_normal([n_hidden_2])),
+    	#'b2': tf.Variable(tf.random_normal([n_hidden_2])),
     	'out': tf.Variable(tf.random_normal([n_classes]))
 	}
 	predictions = neural_net_model(X, weights, biases)
 	training_epochs = 3000
-	learning_rate = 0.001
-	cost = tf.reduce_sum(-y * tf.log(predictions) - (1 - y) * tf.log(1 - predictions))
+	learning_rate = 0.01
+	#cost = tf.reduce_sum(-y * tf.log(predictions) - (1 - y) * tf.log(1 - predictions))
+	cost = tf.reduce_sum(tf.square(predictions - y))
 	optimizer = tf.train.AdamOptimizer(learning_rate = learning_rate).minimize(cost)
 	init = tf.initialize_all_variables()
 	threshold_predictions = tf.cast(tf.greater(predictions, 0.5), "float")
@@ -84,8 +85,9 @@ def do_neural_network(train_data, train_labels, test_data, test_labels):
 
 def neural_net_model(_X, _weights, _biases):
 	layer_1 = tf.nn.sigmoid(tf.add(tf.matmul(_X, _weights['h1']), _biases['b1']))
-	layer_2 = tf.nn.sigmoid(tf.add(tf.matmul(layer_1, _weights['h2']), _biases['b2']))
-	return tf.nn.sigmoid(tf.matmul(layer_2, _weights['out']) + _biases['out'])
+	#layer_2 = tf.nn.sigmoid(tf.add(tf.matmul(layer_1, _weights['h2']), _biases['b2']))
+	#return tf.nn.sigmoid(tf.matmul(layer_2, _weights['out']) + _biases['out'])
+	return tf.nn.sigmoid(tf.matmul(layer_1, _weights['out']) + _biases['out'])
 
 if __name__ == '__main__':
 	(train_data, train_labels) = make_dataset(length_of_pattern, length_of_strings, number_of_train_examples)
